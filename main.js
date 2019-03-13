@@ -211,7 +211,28 @@ const pets = [
     }
   ];
 
-  const printToDom = (divId, textToPrint) => {
-    const selectedDiv = document.getElementById(divId);
-    selectedDiv.innerHTML = textToPrint;
+const init = () => {
+    arrayLoop(pets);
 };
+
+const print = (id, message) => {//PRINTS TO DOM BY ELEMENT ID
+    const selectedDiv = document.getElementById(id);
+    selectedDiv.innerHTML = message;
+  };
+
+const arrayLoop = (yourArray) => {
+    let printString = '';
+
+    yourArray.forEach ((pet) => {
+        printString += `<div class="card">`;
+        printString +=      `<h2>${pet.name}</h2>`;
+        printString +=      `<img src="${pet.imageUrl} alt="photo of ${pet.name} who is a ${pet.type}">`;
+        printString +=      `<p>Color: ${pet.color}</p>`;
+        printString +=      `<p>Skill: ${pet.specialSkill}</p>`;
+        printString +=      `<h6>Type: ${pet.type}</h6>`;
+        printString += `</div>`;
+    })
+    print('testDiv', printString);
+};
+
+init();
