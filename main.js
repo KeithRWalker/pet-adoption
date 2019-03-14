@@ -226,7 +226,7 @@ const arrayLoop = (yourArray) => {
     yourArray.forEach ((pet) => {
         printString += `<div class="card">`;
         printString +=      `<h2>${pet.name}</h2>`;
-        printString +=      `<img src="${pet.imageUrl} alt="photo of ${pet.name} who is a ${pet.type}">`;
+        printString +=      `<img src="${pet.imageUrl}" alt="photo of ${pet.name} who is a ${pet.type}">`;
         printString +=      `<p>Color: ${pet.color}</p>`;
         printString +=      `<p>Skill: ${pet.specialSkill}</p>`;
         printString +=      `<h6>Type: ${pet.type}</h6>`;
