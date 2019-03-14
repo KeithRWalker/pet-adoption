@@ -1,4 +1,4 @@
-const pets = [
+const pets = [//PET OBJECTS| name: | color: | specialSkill: | type: | imageUrl: |
     {
       name: "Dusty",
       color: "Green",
@@ -211,7 +211,8 @@ const pets = [
     }
   ];
 
-const init = () => {
+const init = () => {//INITIALIZATION FUNCTION
+    btnEvent();
     arrayLoop(pets);
 };
 
@@ -220,7 +221,7 @@ const print = (id, message) => {//PRINTS TO DOM BY ELEMENT ID
     selectedDiv.innerHTML = message;
   };
 
-const arrayLoop = (yourArray) => {
+const arrayLoop = (yourArray) => {// LOOPS THROUGH AN ARRAY | ADDS HTML TO A VAR | RUNS PRINT
     let printString = '';
 
     yourArray.forEach ((pet) => {
@@ -235,4 +236,29 @@ const arrayLoop = (yourArray) => {
     print('testDiv', printString);
 };
 
+const btnEvent = () => {//BUTTON ID EVENT LISTENERS for |'all'|'dino'|'cat'|'dog'| ('click', btnClick)
+    document.getElementById('all').addEventListener('click', btnClick);
+    document.getElementById('dino').addEventListener('click', btnClick);
+    document.getElementById('cat').addEventListener('click', btnClick);
+    document.getElementById('dog').addEventListener('click', btnClick);
+};
+
+const btnClick = (e) => { //FILTERS CARDS ON PAGE BY BUTTON CLICKED
+    const btnId = e.target.id;
+    const filteredPets = [];
+
+    pets.forEach((pet) => {
+        if(pet.type === btnId){
+            filteredPets.push(pet);
+        };
+    })
+    
+    if(btnId === 'all'){
+        arrayLoop(pets);
+    } else {
+        arrayLoop(filteredPets);
+    };
+};
+
+//!!//!!//!!//!!//!!//!!//||INITIALIZATION||\\!!\\!!\\!!\\!!\\!!\\!!\\
 init();
