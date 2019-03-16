@@ -226,7 +226,7 @@ const arrayLoop = (yourArray) => {// LOOPS THROUGH AN ARRAY | ADDS HTML TO A VAR
 
     yourArray.forEach ((pet) => {
       printString +=  `<div class="card">`;
-      printString +=    `<div class="card2">`;
+      // printString +=    `<div class="card2">`;
       printString +=      `<h2>${pet.name}</h2>`;
       printString +=      `<img src="${pet.imageUrl}" alt="photo of ${pet.name} who is a ${pet.type}">`;
       printString +=      `<p>Color: ${pet.color}</p>`;
