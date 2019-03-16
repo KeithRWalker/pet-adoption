@@ -6,27 +6,39 @@ body{
 .con{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-img[src$=".gif"] {
-    min-width: 100%;
-  }
-
 .card {
-    flex: 1 0 500px;
+    flex: 0 1 300px;
     box-sizing: border-box;
-    margin: 1rem .25em;
+    margin: /*1rem*/ /*.25em*/ 2rem 2em;
     text-align: center;
+    border: 1px solid red;
+    padding: 1em;
+}
+
+.card2{
+    position:relative;
+    border: 3px solid blue;
 }
 
 .card img{
 	display: block;
-	border: 0;
+    border: 0;
+    border-radius: 100%;
 	width: 100%;
-	height: auto;
+    height: auto;
+}
+
+img[src$=".gif"] {
+    min-width: 100%;
 }
  
+
+.catClass{
+    background-color: aqua;
+}
 /* The media queries are where the number of cards is determined: */
  
 @media screen and (min-width: 40em) {
