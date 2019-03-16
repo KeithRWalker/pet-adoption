@@ -1,32 +1,85 @@
 body{
-    background-color: black;
+    background-color: #222222;
     color: aliceblue;
+    text-align: center;
 }
+
 
 .con{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+}
+.headerTop{
+    color: #fff;
 }
 
-img[src$=".gif"] {
-    min-width: 100%;
-  }
-
 .card {
-    flex: 1 0 500px;
+    flex: 0 1 300px;
     box-sizing: border-box;
-    margin: 1rem .25em;
+    margin: /*1rem*/ /*.25em*/ 2rem 2em;
     text-align: center;
+    padding: 1em;
+    background-color: rgba(17, 17, 17, 0.527);
+    /* background: transparent; */
+    color: whitesmoke;
+    border-radius: 25px;
 }
 
 .card img{
 	display: block;
-	border: 0;
+    border: 0;
+    border-radius: 100%;
 	width: 100%;
-	height: auto;
+    height: auto;
+}
+
+img[src$=".gif"] {
+    min-width: 100%;
 }
  
+button{
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+    background: #7d2585
+}
+
+button:focus {
+    outline: 1px solid #222222;
+    outline-offset: -4px;
+}
+button:active {
+    transform: scale(0.99);
+}
+
+.catClass{
+    background-color: #D11250;
+}
+.dinoClass{
+    background-color: #008F68;
+}
+.dogClass{
+    background-color: #006899;
+}
+.allClass{
+    background-color: #DB5800;
+}
 /* The media queries are where the number of cards is determined: */
  
 @media screen and (min-width: 40em) {
